@@ -30,12 +30,12 @@ function onCreate ({props, local}) {
 }
 
 function render ({children, state}) {
-  if (!state.done) return <delay/>
+  if (!state.done) return <span/>
 
   return (
-    <delay>
+    <span>
       {children}
-    </delay>
+    </span>
   )
 }
 
