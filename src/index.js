@@ -30,13 +30,10 @@ function onCreate ({props, local}) {
 }
 
 function render ({children, state}) {
+  if (!children.length > 1) throw new Error('Delay component accepts only one child')
   if (!state.done) return <span/>
 
-  return (
-    <span>
-      {children}
-    </span>
-  )
+  return children[0]
 }
 
 function onUpdate (prev, next) {
