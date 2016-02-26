@@ -17,7 +17,7 @@ function initialState () {
 }
 
 function onCreate ({props, local}) {
-  const {onEnd, time} = props
+  const {onEnd, time = 0} = props
 
   return function (dispatch) {
     dispatch(local(beginTimer)(
