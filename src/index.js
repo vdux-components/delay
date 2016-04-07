@@ -52,8 +52,8 @@ function onRemove ({state}) {
  * Actions
  */
 
-const beginTimer = createAction('<Delay/> component: Begin timer')
-const endTimer = createAction('<Delay/> component: End timer')
+const beginTimer = createAction('<Delay/> component: Begin timer', null, () => ({logLevel: 'debug'}))
+const endTimer = createAction('<Delay/> component: End timer', null, () => ({logLevel: 'debug'}))
 
 /**
  * Reducer
